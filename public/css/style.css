@@ -134,7 +134,8 @@ header {
 }
 
 header .btn {
-  height: 4rem;
+  height: 3rem;
+  margin-top: 1rem;
 }
 
 .logo {
