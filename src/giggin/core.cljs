@@ -7,19 +7,14 @@
             [giggin.firebase.init :refer [firebase-init]]
             [giggin.firebase.db :refer [db-subscribe]]))
 
-
-
-(defn app
-  []
+(defn app []
   [:div.container
    [header]
    [gigs]
    [orders]
    [footer]])
 
-(defn ^:export main
-  []
-  ;; (api/seed-gigs)
+(defn ^:export main []
   (r/render
    [app]
    (.getElementById js/document "app"))
