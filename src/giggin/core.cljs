@@ -14,9 +14,12 @@
    [orders]
    [footer]])
 
-(defn ^:export main []
+(defn ^:dev/after-load render-app []
   (r/render
    [app]
-   (.getElementById js/document "app"))
+   (.getElementById js/document "app")))
+
+(defn ^:export main []
+  (render-app)
   (firebase-init)
   (db-subscribe ["gigs"]))
